@@ -29,14 +29,33 @@
 
 // |✨✨|  write mode  |✨✨| 
 
+// #include <stdio.h>
+// int main(){
+//     FILE *fptr = fopen("New.txt" , "w");
+//     if(fptr == NULL){
+//         printf("File dosesnt't exist\n");
+//     }else{
+//         fclose(fptr);
+//     }
+//     return 0;
+// }
+
+
+// |✨✨|  File reading mode  |✨✨| 
+
+
 #include <stdio.h>
 int main(){
-    FILE *fptr = fopen("New.txt" , "w");
-    if(fptr == NULL){
-        printf("File dosesnt't exist\n");
-    }else{
-        fclose(fptr);
-    }
+    FILE *fptr ;
+   fptr= fopen("file.txt" , "r");
+
+    char ch ;
+    fscanf(fptr , "%c", &ch) ;
+    printf("%c\n" , ch);  // output=>     H
+    fscanf(fptr , "%c" , &ch);
+    printf("%c\n" ,ch) ; // output   => i;
+
+    fclose(fptr);
     return 0;
 }
 
