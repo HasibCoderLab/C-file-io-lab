@@ -112,31 +112,49 @@
 //     return 0;
 // }
 
-// |✨✨|  File reading mode with fgrtc|✨✨| 
+// |✨✨|  File reading mode with fgetc|✨✨| 
 
+
+// #include <stdio.h>
+// int main(){
+//     FILE *fptr;
+//     fptr = fopen("file.txt" , "r");
+//     printf( "%c" ,fgetc(fptr));
+//     printf("%c" , fgetc(fptr));
+//     printf("%c" , fgetc(fptr));
+//     printf("%c" , fgetc(fptr));
+//     printf("%c\n" , fgetc(fptr));
+//     // printf("%c" , fgetc(fptr));
+// fclose(fptr)
+
+//     return 0;
+// }
+
+
+
+
+
+// |✨✨|  File reading mode with fputc|✨✨| 
 
 #include <stdio.h>
 int main(){
     FILE *fptr;
-    fptr = fopen("file.txt" , "r");
-    printf( "%c" ,fgetc(fptr));
-    printf("%c" , fgetc(fptr));
-    printf("%c" , fgetc(fptr));
-    printf("%c" , fgetc(fptr));
-    printf("%c\n" , fgetc(fptr));
-    // printf("%c" , fgetc(fptr));
+    fptr = fopen("file.txt" , "w");
 
-    return 0;
+   putc('M',(fptr));
+   putc('A',(fptr));
+   putc('N',(fptr));
+   putc('G',(fptr));
+   putc('O',(fptr));
+
+   return 0;
 }
-
-
 
 
 // #include <stdio.h>
 // int main(){
 //     return 0;
 // }
-
 
 // 👉👉  🔹🔹  Question
 // 💥 ⚡ 🔥 ✨  📌  => Notes / Markers📌📍🎯📝
