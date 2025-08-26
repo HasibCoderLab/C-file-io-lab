@@ -60,24 +60,43 @@
 // }
 
 // |✨✨|  File reading mode with int |✨✨| 
+
+// #include <stdio.h>
+// int main(){
+//   FILE *fptr;
+//   fptr = fopen("file.txt", "r");
+
+//   int num;
+//   fscanf(fptr  , "%d", &num);
+//   printf("Number  : %d\n" , num);
+//   fclose(fptr);
+//     return 0;
+// }
+
+
+// |✨✨|  File writing mode with char |✨✨| 
+
 #include <stdio.h>
 int main(){
-  FILE *fptr;
-  fptr = fopen("file.txt", "r");
+    FILE *fptr;
+    fptr = fopen("file.txt" , "w");
 
-  int num;
-  fscanf(fptr  , "%d", &num);
-  printf("Number  : %d\n" , num);
-  fclose(fptr);
+    // char ch
+    fprintf(fptr , "%c" , 'M');
+    fprintf(fptr , "%c" , 'A');
+    fprintf(fptr , "%c" , 'N');
+    fprintf(fptr , "%c" , 'G');
+    fprintf(fptr , "%c" , 'O');
+    // fprintf(fptr , "%c" , '✨');
+
+    fclose(fptr);
     return 0;
 }
-
 
 // #include <stdio.h>
 // int main(){
 //     return 0;
 // }
-
 
 
 // 👉👉  🔹🔹  Question
