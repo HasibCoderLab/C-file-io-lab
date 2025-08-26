@@ -136,20 +136,38 @@
 
 // |✨✨|  File reading mode with fputc|✨✨| 
 
+// #include <stdio.h>
+// int main(){
+//     FILE *fptr;
+//     fptr = fopen("file.txt" , "w");
+
+//    putc('M',(fptr));
+//    putc('A',(fptr));
+//    putc('N',(fptr));
+//    putc('G',(fptr));
+//    putc('O',(fptr));
+//   fclose(fptr);
+//    return 0;
+// }
+
+// |✨✨|  Example of  EOF|✨✨| 
+
+
+
 #include <stdio.h>
 int main(){
-    FILE *fptr;
-    fptr = fopen("file.txt" , "w");
-
-   putc('M',(fptr));
-   putc('A',(fptr));
-   putc('N',(fptr));
-   putc('G',(fptr));
-   putc('O',(fptr));
-
-   return 0;
+   FILE *fptr;
+   fptr  = fopen("file.txt" , "r");
+   char ch ;
+   ch = fgetc(fptr);
+   while(ch != EOF){
+    printf("%c" , ch);
+    ch = fgetc(fptr);
+   }
+   printf("\n");
+    fclose(fptr);
+    return 0;
 }
-
 
 // #include <stdio.h>
 // int main(){
