@@ -62,16 +62,15 @@
 // |✨✨|  File reading mode with int |✨✨| 
 #include <stdio.h>
 int main(){
-    FILE *fptr;
-    fptr = fopen("file.txt" , "r");
+  FILE *fptr;
+  fptr = fopen("file.txt", "r");
 
-    int num;
-    fscanf(fptr, "%d" , &num);
-    printf("%d\n" , num);
-    fclose(fptr);
+  int num;
+  fscanf(fptr  , "%d", &num);
+  printf("Number  : %d\n" , num);
+  fclose(fptr);
     return 0;
 }
-
 
 
 // #include <stdio.h>
