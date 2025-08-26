@@ -95,22 +95,42 @@
 
 // |✨✨|  File append mode with char |✨✨| 
 
+// #include <stdio.h>
+// int main(){
+//     FILE *fptr;
+//     fptr = fopen("file.txt" , "a");
+
+//     fprintf(fptr, "%s" , " ");
+//     fprintf(fptr , "%c" , '&');
+//     fprintf(fptr , "%c" , 'A');
+//     fprintf(fptr , "%c" , 'P');
+//     fprintf(fptr , "%c" , 'P');
+//     fprintf(fptr , "%c" , 'L');
+//     fprintf(fptr , "%c" , 'E');
+//     fclose(fptr);
+
+//     return 0;
+// }
+
+// |✨✨|  File reading mode with fgrtc|✨✨| 
+
+
 #include <stdio.h>
 int main(){
     FILE *fptr;
-    fptr = fopen("file.txt" , "a");
-
-    fprintf(fptr, "%s" , " ");
-    fprintf(fptr , "%c" , '&');
-    fprintf(fptr , "%c" , 'A');
-    fprintf(fptr , "%c" , 'P');
-    fprintf(fptr , "%c" , 'P');
-    fprintf(fptr , "%c" , 'L');
-    fprintf(fptr , "%c" , 'E');
-    fclose(fptr);
+    fptr = fopen("file.txt" , "r");
+    printf( "%c" ,fgetc(fptr));
+    printf("%c" , fgetc(fptr));
+    printf("%c" , fgetc(fptr));
+    printf("%c" , fgetc(fptr));
+    printf("%c\n" , fgetc(fptr));
+    // printf("%c" , fgetc(fptr));
 
     return 0;
 }
+
+
+
 
 // #include <stdio.h>
 // int main(){
